@@ -101,9 +101,33 @@ img { max-width: 100%; display: block; }
 .btn-secondary { background: #fff; border: 1px solid #ead8e1; }
 
 .hero { padding: 90px 0 56px; }
-.hero-grid { display: grid; gap: 28px; align-items: center; grid-template-columns: 1.05fr .95fr; }
-.hero h1 { font-size: clamp(2rem, 4.1vw, 3.2rem); line-height: 1.1; margin: 0 0 14px; }
-.hero p { color: var(--muted); }
+.hero-overlay {
+  position: relative;
+  min-height: 76vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid #eddfe7;
+}
+.hero-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(20, 16, 19, 0.70), rgba(20, 16, 19, 0.35));
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  border-radius: 16px;
+  padding: 28px;
+}
+.hero h1 { font-size: clamp(2rem, 4.1vw, 3.2rem); line-height: 1.1; margin: 0 0 14px; color: #fff; }
+.hero p { color: #f5ecf1; }
 
 .cards { display: grid; gap: 20px; grid-template-columns: repeat(3, 1fr); }
 .card {
