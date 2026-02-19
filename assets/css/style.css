@@ -98,7 +98,7 @@ img { max-width: 100%; display: block; }
 }
 .btn-primary { background: var(--primary); color: #fff; box-shadow: 0 10px 22px rgba(219,111,159,.3); }
 .btn-primary:hover { transform: translateY(-2px); background: var(--primary-dark); }
-.btn-secondary { background: #fff; border: 1px solid #ead8e1; }
+.btn-secondary { background: #fff; border: 1px solid #ead8e1; color: var(--primary-dark); }
 
 .hero { padding: 90px 0 56px; }
 .hero-overlay {
