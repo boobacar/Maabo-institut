@@ -36,6 +36,7 @@ img { max-width: 100%; display: block; }
 .nav { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; }
 .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: var(--primary-dark); font-size: 1.05rem; }
 .brand img { height: 48px; width: 48px; object-fit: cover; border-radius: 10px; border: 1px solid #f0dde6; }
+.nav nav { margin-left: auto; }
 .menu { display: flex; gap: 10px; list-style: none; margin: 0; padding: 0; }
 .menu a { padding: 9px 12px; border-radius: 10px; transition: .25s ease; }
 .menu a[aria-current="page"], .menu a:hover { background: #fdeef5; color: var(--primary-dark); }
@@ -172,7 +173,8 @@ textarea { min-height: 120px; resize: vertical; }
   .hero-grid, .cards, .kpi, .before-after, .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 760px) {
-  .menu-toggle { display: inline-flex; }
+  .menu-toggle { display: inline-flex; margin-left: auto; }
+  .nav nav { margin-left: 0; }
   .menu {
     display: none; position: absolute; right: 4%; top: 66px; background: #fff; border: 1px solid #eddee5; border-radius: 12px;
     flex-direction: column; padding: 10px; min-width: 220px; box-shadow: var(--shadow);
