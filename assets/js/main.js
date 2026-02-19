@@ -7,3 +7,24 @@ if (toggle && menu) {
     toggle.setAttribute('aria-expanded', String(open));
   });
 }
+
+// Framer-like smooth reveal animations (vanilla JS)
+const revealTargets = document.querySelectorAll(
+  '.hero, .section, .card, .gallery-item, .before-after figure, .cta, .form-wrap'
+);
+
+revealTargets.forEach((el) => el.classList.add('reveal'));
+
+const io = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        io.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.12 }
+);
+
+revealTargets.forEach((el) => io.observe(el));
