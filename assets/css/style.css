@@ -39,9 +39,62 @@ img { max-width: 100%; display: block; }
 .menu { display: flex; gap: 10px; list-style: none; margin: 0; padding: 0; }
 .menu a { padding: 9px 12px; border-radius: 10px; transition: .25s ease; }
 .menu a[aria-current="page"], .menu a:hover { background: #fdeef5; color: var(--primary-dark); }
-.menu-toggle { display: none; border: 0; background: var(--accent); padding: 10px 12px; border-radius: 10px; }
+.menu-toggle {
+  display: none;
+  border: 1px solid #ecdbe4;
+  background: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.hamburger {
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  background: var(--primary-dark);
+  position: relative;
+  border-radius: 4px;
+}
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  background: var(--primary-dark);
+  border-radius: 4px;
+}
+.hamburger::before { top: -6px; }
+.hamburger::after { top: 6px; }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 
-.btn { display: inline-block; border: 0; border-radius: 12px; padding: 12px 18px; font-weight: 700; cursor: pointer; transition: .25s ease; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  min-width: 160px;
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 22px;
+  font-weight: 700;
+  font-size: .98rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: .25s ease;
+}
 .btn-primary { background: var(--primary); color: #fff; box-shadow: 0 10px 22px rgba(219,111,159,.3); }
 .btn-primary:hover { transform: translateY(-2px); background: var(--primary-dark); }
 .btn-secondary { background: #fff; border: 1px solid #ead8e1; }
@@ -119,7 +172,7 @@ textarea { min-height: 120px; resize: vertical; }
   .hero-grid, .cards, .kpi, .before-after, .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 760px) {
-  .menu-toggle { display: inline-block; }
+  .menu-toggle { display: inline-flex; }
   .menu {
     display: none; position: absolute; right: 4%; top: 66px; background: #fff; border: 1px solid #eddee5; border-radius: 12px;
     flex-direction: column; padding: 10px; min-width: 220px; box-shadow: var(--shadow);
