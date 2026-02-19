@@ -1,0 +1,38 @@
+<!doctype html><html lang="fr"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Maabo Institut</title>
+<meta name="description" content="Contactez Maabo Institut pour réserver une prestation beauté, demander un devis ou obtenir des informations.">
+<meta property="og:title" content="Contact Maabo Institut"><meta property="og:description" content="Réservation rapide via formulaire et WhatsApp.">
+<link rel="stylesheet" href="assets/css/style.css"></head><body>
+<a href="#main" class="skip-link">Aller au contenu principal</a>
+<header class="header"><div class="container nav"><a class="brand" href="index.html">Maabo Institut</a><button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">Menu</button><nav><ul class="menu"><li><a href="index.html">Accueil</a></li><li><a href="services.html">Services</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="apropos.html">À propos</a></li><li><a href="contact.html" aria-current="page">Contact</a></li></ul></nav></div></header>
+<main id="main" class="section"><div class="container">
+<h1 class="section-title">Contact & réservation</h1>
+<p class="section-subtitle">Réservez votre créneau ou demandez un devis personnalisé.</p>
+<div class="form-wrap">
+<form id="contact-form" novalidate>
+<div class="form-row">
+<div><label for="nom">Nom complet *</label><input id="nom" name="nom" required></div>
+<div><label for="telephone">Téléphone *</label><input id="telephone" name="telephone" required></div>
+</div>
+<div class="form-row">
+<div><label for="email">Email</label><input id="email" name="email" type="email"></div>
+<div><label for="service">Service souhaité *</label>
+<select id="service" name="service" required><option value="">Choisir...</option><option>Soin visage</option><option>Soin corps</option><option>Manucure/Pédicure</option><option>Massage</option><option>Autre</option></select>
+</div>
+</div>
+<div><label for="message">Votre message *</label><textarea id="message" name="message" required></textarea></div>
+<p><button class="btn btn-primary" type="submit">Envoyer la demande</button>
+<a class="btn btn-secondary" href="https://wa.me/221770000000" target="_blank" rel="noopener">WhatsApp direct</a></p>
+<p id="form-message" class="form-msg" aria-live="polite"></p>
+</form>
+</div>
+<section class="section">
+<h2 class="section-title">Nous trouver</h2>
+<p>Adresse: à compléter, Dakar, Sénégal</p>
+<iframe title="Carte Maabo Institut" src="https://www.google.com/maps?q=Dakar&output=embed" width="100%" height="320" style="border:0;border-radius:12px" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+</div></main>
+<footer class="footer"><div class="container small">© <span id="year"></span> Maabo Institut.</div></footer>
+<script src="assets/js/main.js"></script><script src="assets/js/contact.js"></script><script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body></html>
